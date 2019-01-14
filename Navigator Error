@@ -1,0 +1,29 @@
+Navigator Error
+An unexpected error occurred on Navigator start-up
+
+Report
+Please report this issue in the anaconda issue tracker
+
+Main Error
+'root_prefix'
+Traceback
+Traceback (most recent call last):
+  File "D:\Anaconda3\lib\site-packages\anaconda_navigator\exceptions.py", line 75, in exception_handler
+    return_value = func(*args, **kwargs)
+  File "D:\Anaconda3\lib\site-packages\anaconda_navigator\app\start.py", line 150, in start_app
+    window = run_app(splash)
+  File "D:\Anaconda3\lib\site-packages\anaconda_navigator\app\start.py", line 65, in run_app
+    window = MainWindow(splash=splash, tab_project=False)
+  File "D:\Anaconda3\lib\site-packages\anaconda_navigator\widgets\main_window.py", line 168, in __init__
+    self.api = AnacondaAPI()
+  File "D:\Anaconda3\lib\site-packages\anaconda_navigator\api\anaconda_api.py", line 2294, in AnacondaAPI
+    ANACONDA_API = _AnacondaAPI()
+  File "D:\Anaconda3\lib\site-packages\anaconda_navigator\api\anaconda_api.py", line 91, in __init__
+    self._conda_api = CondaAPI()
+  File "D:\Anaconda3\lib\site-packages\anaconda_navigator\api\conda_api.py", line 1767, in CondaAPI
+    CONDA_API = _CondaAPI()
+  File "D:\Anaconda3\lib\site-packages\anaconda_navigator\api\conda_api.py", line 350, in __init__
+    self.set_conda_prefix(info=get_conda_info())
+  File "D:\Anaconda3\lib\site-packages\anaconda_navigator\api\conda_api.py", line 505, in set_conda_prefix
+    self.ROOT_PREFIX = info['root_prefix']
+KeyError: 'root_prefix'
